@@ -1,33 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sapark <sapark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/02 10:48:22 by sapark            #+#    #+#             */
-/*   Updated: 2019/05/17 16:52:47 by sapark           ###   ########.fr       */
+/*   Created: 2019/05/02 11:09:35 by sapark            #+#    #+#             */
+/*   Updated: 2019/05/17 16:40:09 by sapark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	int			i;
-	char		*ptr1;
-	const char	*ptr2;
+	unsigned char	*ptr1;
+	unsigned char	*ptr2;
+	unsigned int	i;
 
 	i = 0;
-	ptr1 = (char *)dst;
-	ptr2 = (const char *)src;
-	// if (!dst && !src)
-	// 	return ((void *)0);
-	while (n > 0)
+	ptr1 = (unsigned char*)dst;
+	ptr2 = (unsigned char*)src;
+	if (!dst && !src)
+		return (NULL);
+	if (ptr2 < ptr1)
 	{
-		ptr1[i] = ptr2[i];
-		n--;
-		i++;
+		i = len;
+		while (i-- > 0)
+			ptr1[i] = ptr2[i];
+	}
+	else
+	{
+		i = 0;
+		while (i < len)
+		{
+			ptr1[i] = ptr2[i];
+			i++;
+		}
 	}
 	return (dst);
 }

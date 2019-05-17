@@ -6,7 +6,7 @@
 /*   By: sapark <sapark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/10 00:46:29 by sapark            #+#    #+#             */
-/*   Updated: 2019/05/17 05:31:39 by sapark           ###   ########.fr       */
+/*   Updated: 2019/05/17 04:46:16 by sapark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,6 @@ char	**ft_strsplit(char const *s, char c)
 			res[j++] = ft_strsub(s, start, i - start + 2);
 		i++;
 	}
-	res[j] = ((void *)0);
+	res[j] = NULL;
 	return (res);
 }
