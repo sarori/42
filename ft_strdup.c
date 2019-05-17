@@ -6,7 +6,7 @@
 /*   By: sapark <sapark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/30 10:01:00 by sapark            #+#    #+#             */
-/*   Updated: 2019/05/15 20:34:06 by sapark           ###   ########.fr       */
+/*   Updated: 2019/05/16 23:13:53 by sapark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strdup(const char *str)
 {
-	char *res;
-	int len;
+	char	*res;
+	int		len;
 
 	len = 0;
 	while (str[len] != '\0')

@@ -6,7 +6,7 @@
 /*   By: sapark <sapark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/30 14:39:31 by sapark            #+#    #+#             */
-/*   Updated: 2019/05/15 14:29:20 by sapark           ###   ########.fr       */
+/*   Updated: 2019/05/16 23:16:17 by sapark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	size_t		i;
+	size_t			i;
 	unsigned int	len;
 
 	i = 0;

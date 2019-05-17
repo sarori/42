@@ -6,18 +6,18 @@
 /*   By: sapark <sapark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/01 20:00:43 by sapark            #+#    #+#             */
-/*   Updated: 2019/05/15 14:23:34 by sapark           ###   ########.fr       */
+/*   Updated: 2019/05/16 23:18:15 by sapark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
-	int		i;
-	int		is_minus;
-	int		sum;
-	
+	int	i;
+	int	is_minus;
+	int	sum;
+
 	i = 0;
 	is_minus = 0;
 	sum = 0;

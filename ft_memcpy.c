@@ -6,7 +6,7 @@
 /*   By: sapark <sapark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/02 10:48:22 by sapark            #+#    #+#             */
-/*   Updated: 2019/05/16 17:31:54 by sapark           ###   ########.fr       */
+/*   Updated: 2019/05/16 23:25:59 by sapark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	int		i;
-	char	*ptr1;
+	int			i;
+	char		*ptr1;
 	const char	*ptr2;
 
 	i = 0;

@@ -6,7 +6,7 @@
 /*   By: sapark <sapark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/30 13:51:42 by sapark            #+#    #+#             */
-/*   Updated: 2019/05/16 17:35:28 by sapark           ###   ########.fr       */
+/*   Updated: 2019/05/16 23:29:13 by sapark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
 	unsigned int	n;
-	int i;
+	int				i;
 
 	i = 0;
 	n = ft_strlen(src);

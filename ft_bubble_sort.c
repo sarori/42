@@ -6,26 +6,32 @@
 /*   By: sapark <sapark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/16 17:58:17 by sapark            #+#    #+#             */
-/*   Updated: 2019/05/16 17:59:21 by sapark           ###   ########.fr       */
+/*   Updated: 2019/05/16 23:41:00 by sapark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void bubble_sort(int arr[], int count)
+void	ft_bubble_sort(int arr[], int count)
 {
-    int temp;
+	int	temp;
+	int	i;
+	int j;
 
-    for (int i = 0; i < count; i++)
-    {
-        for (int j = 0; j < count - 1; j++)
-        {
-            if (arr[j] > arr[j + 1])
-            {
-                temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;
-            }
-        }
-    }
+	i = 0;
+	j = 0;
+	while (i < count)
+	{
+		while (j < count - 1)
+		{
+			if (arr[j] > arr[j + 1])
+			{
+				temp = arr[j];
+				arr[j] = arr[j + 1];
+				arr[j + 1] = temp;
+			}
+			j++;
+		}
+		i++;
+	}
 }

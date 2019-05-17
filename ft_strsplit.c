@@ -6,7 +6,7 @@
 /*   By: sapark <sapark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/10 00:46:29 by sapark            #+#    #+#             */
-/*   Updated: 2019/05/16 17:38:44 by sapark           ###   ########.fr       */
+/*   Updated: 2019/05/16 23:07:21 by sapark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	**ft_strsplit(char const *s, char c)
 {
-	char	**res;
-	int		i;
-	int		j;
+	char			**res;
+	int				i;
+	int				j;
 	unsigned int	size;
 	unsigned int	start;
 
@@ -30,7 +30,7 @@ char	**ft_strsplit(char const *s, char c)
 		return (NULL);
 	while (size > 0)
 	{
-		if (s[i] == c && s[i] != c )
+		if (s[i] == c && s[i] != c)
 			start = i + 1;
 		else
 			while (s[i++] != c && s[i + 1] == c)

@@ -6,7 +6,7 @@
 /*   By: sapark <sapark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/02 12:07:13 by sapark            #+#    #+#             */
-/*   Updated: 2019/05/03 18:38:17 by sapark           ###   ########.fr       */
+/*   Updated: 2019/05/16 23:10:27 by sapark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned char	*ptr1;
-	unsigned char	*ptr2;
+	unsigned char		*ptr1;
+	unsigned char		*ptr2;
 
 	ptr1 = (unsigned char*)s1;
 	ptr2 = (unsigned char*)s2;

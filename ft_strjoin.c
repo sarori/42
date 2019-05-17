@@ -6,7 +6,7 @@
 /*   By: sapark <sapark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/09 22:49:03 by sapark            #+#    #+#             */
-/*   Updated: 2019/05/15 14:32:04 by sapark           ###   ########.fr       */
+/*   Updated: 2019/05/16 23:17:50 by sapark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*res;
+	char			*res;
 	unsigned int	len1;
 	unsigned int	len2;
 

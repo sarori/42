@@ -6,7 +6,7 @@
 /*   By: sapark <sapark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/30 13:44:37 by sapark            #+#    #+#             */
-/*   Updated: 2019/05/15 14:27:04 by sapark           ###   ########.fr       */
+/*   Updated: 2019/05/16 23:25:31 by sapark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strcpy(char *dst, const char *src)
 {
-	int		i;
-	
+	int	i;
+
 	i = 0;
 	while (src[i] != '\0')
 	{

@@ -6,13 +6,13 @@
 /*   By: sapark <sapark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/15 16:32:54 by sapark            #+#    #+#             */
-/*   Updated: 2019/05/16 16:29:37 by sapark           ###   ########.fr       */
+/*   Updated: 2019/05/16 23:15:07 by sapark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int     ft_digit(int n)
+int	ft_digit(int n)
 {
 	unsigned int	cnt;
 

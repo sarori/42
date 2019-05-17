@@ -6,7 +6,7 @@
 /*   By: sapark <sapark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/09 20:48:17 by sapark            #+#    #+#             */
-/*   Updated: 2019/05/15 20:50:53 by sapark           ###   ########.fr       */
+/*   Updated: 2019/05/16 23:15:20 by sapark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {
-	char	*res;
+	char			*res;
 	unsigned int	len;
-	int		i;
+	int				i;
 
 	i = 0;
 	if (!s)
