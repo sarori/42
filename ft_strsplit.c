@@ -6,7 +6,7 @@
 /*   By: sapark <sapark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/10 00:46:29 by sapark            #+#    #+#             */
-/*   Updated: 2019/05/17 17:18:55 by sapark           ###   ########.fr       */
+/*   Updated: 2019/05/17 17:25:01 by sapark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ char	**ft_strsplit(char const *s, char c)
 
 	if (!s)
 		return (NULL);
+	if (!(res = ft_sizecount(s, c)))
+		return (NULL);
 	i = 0;
 	j = 0;
 	start = 0;
-	if (!(res = ft_sizecount(s, c)))
-		return (NULL);
 	while (s[i] && s[i + 1])
 	{
 		if (s[i] == c && s[i + 1] != c)
