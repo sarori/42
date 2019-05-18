@@ -6,16 +6,17 @@
 /*   By: sapark <sapark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/16 17:17:16 by sapark            #+#    #+#             */
-/*   Updated: 2019/05/17 03:29:44 by sapark           ###   ########.fr       */
+/*   Updated: 2019/05/17 17:18:01 by sapark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_sizecount(char const *s, char c)
+char	**ft_sizecount(char const *s, char c)
 {
-	int	i;
-	int	cnt;
+	unsigned int	i;
+	int				cnt;
+	char			**res;
 
 	i = 0;
 	if (s[0] != c)
@@ -28,5 +29,7 @@ size_t	ft_sizecount(char const *s, char c)
 			cnt++;
 		i++;
 	}
-	return ((size_t)cnt);
+	if (!(res = (char **)malloc((cnt + 1) * sizeof(char *))))
+		return (NULL);
+	return (res);
 }
