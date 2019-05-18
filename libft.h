@@ -6,7 +6,7 @@
 /*   By: sapark <sapark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/01 09:50:20 by sapark            #+#    #+#             */
-/*   Updated: 2019/05/17 17:26:35 by sapark           ###   ########.fr       */
+/*   Updated: 2019/05/17 17:34:58 by sapark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 int					ft_digit(int n);
 void				ft_swap(int *a, int *b);
-char				**ft_sizecount(char const *s, char c);
+int					ft_number_length(int n);
 int					ft_abs(int num);
 void				ft_bubble_sort(int arr[], int count);
 #endif
