@@ -6,36 +6,67 @@
 /*   By: sapark <sapark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 19:57:13 by sapark            #+#    #+#             */
-/*   Updated: 2019/05/17 20:36:23 by sapark           ###   ########.fr       */
+/*   Updated: 2019/05/17 20:48:25 by sapark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_strsplit(char const *s, char c)
+static size_t	ft_wordlen(const char *s, char c)
 {
-	unsigned int	i;
-	int				len;
-	int				start;
-	char			**res;
+	size_t	i;
+	size_t	len;
 
-	if (!s)
-		return (NULL);
-	if (!(res = ft_sizecount(s, c)))
-		return (NULL);
-	start = 0;
 	i = 0;
 	len = 0;
-	while (s[i] && s[i + 1])
+	while (s[i] == c)
+		i++;
+	while (s[i] != c && s[i++])
+		len++;
+	return (len);
+}
+
+static size_t	ft_wordcount(const char *s, char c)
+{
+	size_t	i;
+	size_t	w;
+
+	i = 0;
+	w = 0;
+	while (s[i])
 	{
-		if (s[i] == c && s[i + 1] != c)
-			start = i + 1;
-		if (s[i] != c && s[i + 1] == c)
-			res[len++] = ft_strsub(s, start, i - start + 1);
-		if (i + 2 == ft_strlen(s) && s[i + 1] != c)
-			res[len++] = ft_strsub(s, start, i - start + 2);
+		if (s[i] != c)
+			w++;
+		while (s[i] != c && s[i + 1])
+			i++;
 		i++;
 	}
-	res[len] = ((void *)0);
-	return (res);
+	return (w);
+}
+
+char			**ft_strsplit(char const *s, char c)
+{
+	size_t	i;
+	size_t	j;
+	size_t	k;
+	char	**w;
+
+	i = 0;
+	k = 0;
+	if (!s || !(w = (char **)malloc(sizeof(char *) * (ft_wordcount(s, c) + 1))))
+		return (NULL);
+	while (i < ft_wordcount(s, c))
+	{
+		if (!(w[i] = (char *)malloc(sizeof(char) * (ft_wordlen(&s[k], c) + 1))))
+			return (NULL);
+		j = 0;
+		while (s[k] == c)
+			k++;
+		while (s[k] != c && s[k])
+			w[i][j++] = s[k++];
+		w[i][j] = '\0';
+		i++;
+	}
+	w[i] = NULL;
+	return (w);
 }

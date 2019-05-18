@@ -6,7 +6,7 @@
 /*   By: sapark <sapark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/01 09:50:20 by sapark            #+#    #+#             */
-/*   Updated: 2019/05/17 20:36:07 by sapark           ###   ########.fr       */
+/*   Updated: 2019/05/17 20:41:23 by sapark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,5 +96,4 @@ void				ft_swap(int *a, int *b);
 int					ft_number_length(int n);
 int					ft_abs(int num);
 void				ft_bubble_sort(int arr[], int count);
-char				**ft_sizecount(char const *s, char c);
 #endif
