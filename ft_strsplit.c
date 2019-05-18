@@ -6,7 +6,7 @@
 /*   By: sapark <sapark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/10 00:46:29 by sapark            #+#    #+#             */
-/*   Updated: 2019/05/17 16:59:24 by sapark           ###   ########.fr       */
+/*   Updated: 2019/05/17 17:14:00 by sapark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	**ft_strsplit(char const *s, char c)
 	char			**res;
 	unsigned int	i;
 	int				j;
-	unsigned int	start;
+	int				start;
 
 	if (!s)
 		return (NULL);
