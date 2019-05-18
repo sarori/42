@@ -6,13 +6,13 @@
 /*   By: sapark <sapark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/30 14:16:45 by sapark            #+#    #+#             */
-/*   Updated: 2019/05/02 13:23:42 by sapark           ###   ########.fr       */
+/*   Updated: 2019/05/17 21:12:40 by sapark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *restrict s1, const char *restrict s2)
+char	*ft_strcat(char *s1, const char *s2)
 {
 	int	i;
 	int len;
