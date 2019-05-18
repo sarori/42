@@ -6,7 +6,7 @@
 /*   By: sapark <sapark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 19:57:13 by sapark            #+#    #+#             */
-/*   Updated: 2019/05/17 20:49:29 by sapark           ###   ########.fr       */
+/*   Updated: 2019/05/17 21:31:15 by sapark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static char	**ft_sizecount(char const *s, char c)
 	return (res);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char		**ft_strsplit(char const *s, char c)
 {
 	unsigned int	i;
 	int				len;
