@@ -6,7 +6,7 @@
 /*   By: sapark <sapark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/09 18:19:03 by sapark            #+#    #+#             */
-/*   Updated: 2019/05/15 13:16:42 by sapark           ###   ########.fr       */
+/*   Updated: 2019/05/17 21:27:57 by sapark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,8 @@
 
 void	ft_strdel(char **as)
 {
-	char	*res;
-
-	if (!as)
+	if (!*as)
 		return ;
-	if (!(res = (char *)malloc(sizeof(char *))))
-		return ;
-	free(res);
-	*as = 0;
+	free(*as);
+	*as = NULL;
 }
