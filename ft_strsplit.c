@@ -6,7 +6,7 @@
 /*   By: sapark <sapark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/10 00:46:29 by sapark            #+#    #+#             */
-/*   Updated: 2019/05/17 17:25:01 by sapark           ###   ########.fr       */
+/*   Updated: 2019/05/17 17:30:03 by sapark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,28 @@
 
 char	**ft_strsplit(char const *s, char c)
 {
-	char			**res;
 	unsigned int	i;
-	int				j;
+	int				len;
 	int				start;
+	char			**res;
 
 	if (!s)
 		return (NULL);
 	if (!(res = ft_sizecount(s, c)))
 		return (NULL);
-	i = 0;
-	j = 0;
 	start = 0;
+	i = 0;
+	len = 0;
 	while (s[i] && s[i + 1])
 	{
 		if (s[i] == c && s[i + 1] != c)
 			start = i + 1;
-		if ((s[i] != c && s[i + 1] == c))
-			res[j++] = ft_strsub(s, start, i - start + 1);
+		if (s[i] != c && s[i + 1] == c)
+			res[len++] = ft_strsub(s, start, i - start + 1);
 		if (i + 2 == ft_strlen(s) && s[i + 1] != c)
-			res[j++] = ft_strsub(s, start, i - start + 2);
+			res[len++] = ft_strsub(s, start, i - start + 2);
 		i++;
 	}
-	res[j] = ((void *)0);
+	res[len] = ((void *)0);
 	return (res);
 }
