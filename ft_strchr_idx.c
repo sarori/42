@@ -1,42 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strchr_idx.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sapark <sapark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/30 13:51:42 by sapark            #+#    #+#             */
-/*   Updated: 2019/07/29 20:47:22 by sapark           ###   ########.fr       */
+/*   Created: 2019/06/02 17:15:35 by sapark            #+#    #+#             */
+/*   Updated: 2019/06/02 17:24:03 by sapark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dst, const char *src, size_t len)
+int	ft_strchr_idx(const char *s, char c)
 {
-	unsigned int	n;
-	int				i;
+	int	i;
 
 	i = 0;
-	n = ft_strlen(src);
-	if (n < len)
+	while (s[i] != '\0')
 	{
-		while (src[i] != '\0')
-		{
-			dst[i] = src[i];
-			i++;
-		}
-		while (len - i > 0)
-		{
-			dst[i] = '\0';
-			i++;
-		}
+		if (s[i] == c)
+			break ;
+		i++;
 	}
-	else
-		while (len-- > 0)
-		{
-			dst[i] = src[i];
-			i++;
-		}
-	return (dst);
+	if (s[i] == '\0')
+		return (-1);
+	return (i);
 }
